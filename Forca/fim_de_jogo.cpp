@@ -1,7 +1,8 @@
 #include <iostream>
-#include "nao_acertou.cpp"
+#include "nao_acertou.hpp"
 #include "adiciona_palavra.hpp"
 
+extern std :: string palavra_sec;
 
 void fim_de_jogo(){
     std :: cout << "Acabou o jogo" << std ::endl;

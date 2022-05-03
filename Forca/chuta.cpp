@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
-#include "letra_existe.cpp"
+#include "letra_existe.hpp"
 
 extern std :: map<char, bool> chutou;
 extern std :: vector<char> chute_errado;

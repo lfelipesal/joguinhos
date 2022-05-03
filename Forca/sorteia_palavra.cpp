@@ -3,9 +3,9 @@
 #include <string>
 #include <ctime>
 #include <cstdlib>
-#include "le_arquivo.cpp"
+#include "le_arquivo.hpp"
 
-std :: string palavra_sec;
+extern std :: string palavra_sec;
 
 void sorteia_palavra(){
     std :: vector<std :: string> palavras = le_arquivo();
