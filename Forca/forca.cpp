@@ -17,7 +17,7 @@
 #include "le_arquivo.hpp"
 
 using namespace std;
-string palavra_sec = "MELANCIA";
+string palavra_sec;
 map<char, bool> chutou;
 vector<char> chute_errado;
 
