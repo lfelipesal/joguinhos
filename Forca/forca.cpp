@@ -9,12 +9,11 @@
 #include "nao_acertou.hpp"
 #include "imprimi_inicio.hpp"
 #include "sorteia_palavra.hpp"
-#include "nao_enforcou.hpp"
 #include "imprimi_erros.hpp"
 #include "imprimi_acertos.hpp"
 #include "chuta.hpp"
-#include "fim_de_jogo.hpp"
 #include "le_arquivo.hpp"
+#include "adiciona_palavra.hpp"
 
 using namespace std;
 string palavra_sec;
@@ -24,14 +23,29 @@ vector<char> chute_errado;
 int main(){
 
     imprimi_inicio();
-    sorteia_palavra();
+    palavra_sec = sorteia_palavra();
     le_arquivo();
     
 
-    while (nao_acertou() && nao_enforcou()){
-        imprimi_erros();
-        imprimi_acertos();
-        chuta();
+    while (nao_acertou(chutou, palavra_sec) && chute_errado.size()<5){
+        imprimi_erros(chute_errado);
+        imprimi_acertos(chutou, palavra_sec);
+        chuta(&chutou,&chute_errado);
     }
-    fim_de_jogo();
+    
+    std :: cout << "Acabou o jogo" << std ::endl;
+    std :: cout << "A palavra era: " << palavra_sec << std :: endl;
+
+    if(nao_acertou(chutou, palavra_sec)){
+        std :: cout << "Você foi enforcado :( Tenta denovo!" << std :: endl;
+    }else {
+        std :: cout << "Você acertou a palavra, parabéns!" << std::endl;
+
+        std:: cout << "Deseja adicionar uma nova palavra? (S/N)" <<std:: endl;
+        char resp;
+        std::cin >> resp;
+        if(resp == 'S'){
+            adiciona_palavra();
+        }
+    }
 }

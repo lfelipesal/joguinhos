@@ -1,3 +1,3 @@
 #pragma once
 
-void imprimi_erros();
+void imprimi_erros(std :: vector<char> chute_errado);

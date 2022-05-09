@@ -1,9 +1,7 @@
 #include <vector>
 #include <iostream>
 
-extern std :: vector<char> chute_errado;
-
-void imprimi_erros(){
+void imprimi_erros(std :: vector<char> chute_errado){
     std ::cout << "Chutes errados: ";
     for(char letra: chute_errado){
         std :: cout << letra << " ";
