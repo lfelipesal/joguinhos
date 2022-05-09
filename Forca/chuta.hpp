@@ -2,4 +2,4 @@
 #include <map>
 #include <vector>
 
-void chuta(std :: map<char, bool>* chutou,std :: vector<char>* chute_errado);
+void chuta(std :: map<char, bool>& chutou,std :: vector<char>& chute_errado);

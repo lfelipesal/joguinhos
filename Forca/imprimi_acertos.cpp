@@ -1,8 +1,7 @@
-#include <string>
-#include <map>
+#include "imprimi_acertos.hpp"
 #include <iostream>
      
-void imprimi_acertos(std :: map<char, bool> chutou,std :: string palavra_sec){
+void imprimi_acertos(std :: map<char, bool>& chutou,std :: string& palavra_sec){
     for(char letra : palavra_sec){
         if(chutou[letra]){
             std ::cout << letra << " ";
