@@ -30,7 +30,7 @@ int main(){
     while (nao_acertou(chutou, palavra_sec) && chute_errado.size()<5){
         imprimi_erros(chute_errado);
         imprimi_acertos(chutou, palavra_sec);
-        chuta(&chutou,&chute_errado);
+        chuta(chutou,chute_errado);
     }
     
     std :: cout << "Acabou o jogo" << std ::endl;

@@ -2,4 +2,4 @@
 #include <map>
 #include <string>
 
-bool nao_acertou(std :: map<char, bool>& chutou, std :: string& palavra_sec );
+bool nao_acertou(const std :: map<char, bool>& chutou, const std :: string& palavra_sec );
